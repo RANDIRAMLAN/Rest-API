@@ -1,0 +1,25 @@
+
+[
+    {
+    "nama": "Randi",
+    "umur": 29,
+    "NPM": "201143500180",
+    "lulus": true,
+    "hobby": ["Travelling", "Reading"],
+    "Pembimbing": {
+        "pembimbing1": "Aswin",
+        "pembimbing2": "Hanifa"
+    }
+},
+{
+    "nama": "Ramlan",
+    "umur": 29,
+    "NPM": "201143500180",
+    "lulus": true,
+    "hobby": ["Travelling", "Reading"],
+    "Pembimbing": {
+        "pembimbing1": "Aswin",
+        "pembimbing2": "Hanifa"
+    }
+}
+]

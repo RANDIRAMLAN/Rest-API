@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JSON</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script>
+        // menggunakan javascript
+        const mahasiswa =  {
+            nama: "Randi",
+            NPM: "201143500180",
+            email: "randi@gmail.com"
+        }
+        // json.stringify untuk menjadikan object menjadi json
+        console.log(JSON.stringify(mahasiswa));
+
+        // menggunakan ajax (vanila javascript)
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200){
+                // json.parse menjadikan json menjadi object
+                let mhs = JSON.parse(this.responseText);
+                console.log(mhs);
+            }
+        }
+        xhr.open('GET', 'coba.json', true);
+        xhr.send();
+
+        // menggunakan jquery dengan hasi dalam bentuk object
+        $.getJSON('coba.json', function (data) {
+            console.log(data);
+        });
+    </script>
+</body>
+</html>
